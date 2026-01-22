@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --bg-primary: #0f1419;
-  --bg-secondary: #1a2332;
-  --bg-tertiary: #243447;
-  --accent-primary: #00d4aa;
-  --accent-secondary: #0099ff;
-  --accent-warning: #ff9500;
-  --accent-danger: #ff3b5c;
-  --text-primary: #ffffff;
-  --text-secondary: #8899a6;
-  --border-color: #38444d;
+  /* New Color Palette */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --bg-tertiary: #2a2a2a;
+  --accent-primary: #00E676;
+  --accent-secondary: #00BCD4;
+  --accent-warning: #FFC107;
+  --accent-danger: #FF5252;
+  --text-primary: #E0E0E0;
+  --text-secondary: #9E9E9E;
+  --border-color: #333333;
 }
 
 @theme inline {
@@ -34,14 +35,14 @@ body {
 
 /* Command Center Aesthetic */
 .glass-panel {
-  background: linear-gradient(135deg, rgba(26, 35, 50, 0.95), rgba(36, 52, 71, 0.9));
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.95), rgba(42, 42, 42, 0.9));
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 212, 170, 0.2);
+  border: 1px solid rgba(0, 230, 118, 0.2);
   border-radius: 12px;
 }
 
 .glass-panel-dark {
-  background: linear-gradient(135deg, rgba(15, 20, 25, 0.98), rgba(26, 35, 50, 0.95));
+  background: linear-gradient(135deg, rgba(18, 18, 18, 0.98), rgba(30, 30, 30, 0.95));
   backdrop-filter: blur(12px);
   border: 1px solid var(--border-color);
   border-radius: 12px;
@@ -49,8 +50,8 @@ body {
 
 /* Status Badges */
 .badge-normal {
-  background: linear-gradient(135deg, #00d4aa, #00b894);
-  color: #fff;
+  background: linear-gradient(135deg, #00E676, #00C853);
+  color: #121212;
   padding: 4px 12px;
   border-radius: 20px;
   font-weight: 600;
@@ -59,7 +60,7 @@ body {
 }
 
 .badge-abnormal {
-  background: linear-gradient(135deg, #ff3b5c, #e91e63);
+  background: linear-gradient(135deg, #FF5252, #FF1744);
   color: #fff;
   padding: 4px 12px;
   border-radius: 20px;
@@ -70,8 +71,8 @@ body {
 }
 
 .badge-warning {
-  background: linear-gradient(135deg, #ff9500, #ff6b00);
-  color: #fff;
+  background: linear-gradient(135deg, #FFC107, #FF9800);
+  color: #121212;
   padding: 4px 12px;
   border-radius: 20px;
   font-weight: 600;
@@ -81,27 +82,27 @@ body {
 
 /* Risk Level Badges */
 .risk-low {
-  background: rgba(0, 212, 170, 0.2);
-  color: #00d4aa;
-  border: 1px solid #00d4aa;
+  background: rgba(0, 230, 118, 0.2);
+  color: #00E676;
+  border: 1px solid #00E676;
 }
 
 .risk-medium {
-  background: rgba(255, 149, 0, 0.2);
-  color: #ff9500;
-  border: 1px solid #ff9500;
+  background: rgba(255, 193, 7, 0.2);
+  color: #FFC107;
+  border: 1px solid #FFC107;
 }
 
 .risk-high {
-  background: rgba(255, 59, 92, 0.2);
-  color: #ff3b5c;
-  border: 1px solid #ff3b5c;
+  background: rgba(255, 82, 82, 0.2);
+  color: #FF5252;
+  border: 1px solid #FF5252;
 }
 
 /* Buttons */
 .btn-primary {
-  background: linear-gradient(135deg, #00d4aa, #00b894);
-  color: #fff;
+  background: linear-gradient(135deg, #00E676, #00C853);
+  color: #121212;
   padding: 12px 24px;
   border: none;
   border-radius: 8px;
@@ -112,14 +113,14 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 212, 170, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
-  color: #00d4aa;
+  color: #00E676;
   padding: 12px 24px;
-  border: 2px solid #00d4aa;
+  border: 2px solid #00E676;
   border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
@@ -127,7 +128,7 @@ body {
 }
 
 .btn-secondary:hover {
-  background: rgba(0, 212, 170, 0.1);
+  background: rgba(0, 230, 118, 0.1);
 }
 
 /* Input Fields */
@@ -145,7 +146,7 @@ body {
 .input-field:focus {
   outline: none;
   border-color: var(--accent-primary);
-  box-shadow: 0 0 0 3px rgba(0, 212, 170, 0.2);
+  box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.2);
 }
 
 /* Charts Container */
@@ -162,12 +163,12 @@ body {
   0%,
   100% {
     opacity: 1;
-    box-shadow: 0 0 0 0 rgba(255, 59, 92, 0.4);
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.4);
   }
 
   50% {
     opacity: 0.9;
-    box-shadow: 0 0 20px 5px rgba(255, 59, 92, 0.3);
+    box-shadow: 0 0 20px 5px rgba(255, 82, 82, 0.3);
   }
 }
 
@@ -224,7 +225,7 @@ body {
 
 /* Camera Feed Placeholder */
 .camera-feed {
-  background: linear-gradient(135deg, #1a2332, #0f1419);
+  background: linear-gradient(135deg, #1e1e1e, #121212);
   border: 2px solid var(--border-color);
   border-radius: 12px;
   aspect-ratio: 16/9;
@@ -246,15 +247,15 @@ body {
     repeating-linear-gradient(0deg,
       transparent,
       transparent 2px,
-      rgba(0, 212, 170, 0.03) 2px,
-      rgba(0, 212, 170, 0.03) 4px);
+      rgba(0, 230, 118, 0.03) 2px,
+      rgba(0, 230, 118, 0.03) 4px);
   pointer-events: none;
 }
 
 /* Abnormal Mode Styling */
 .abnormal-panel {
-  background: linear-gradient(135deg, rgba(255, 59, 92, 0.1), rgba(26, 35, 50, 0.95));
-  border: 1px solid rgba(255, 59, 92, 0.4);
+  background: linear-gradient(135deg, rgba(255, 82, 82, 0.1), rgba(30, 30, 30, 0.95));
+  border: 1px solid rgba(255, 82, 82, 0.4);
 }
 
 /* Grid Utility */
@@ -280,7 +281,7 @@ body {
 }
 
 .nav-link.active {
-  background: rgba(0, 212, 170, 0.15);
+  background: rgba(0, 230, 118, 0.15);
   color: var(--accent-primary);
   border-left: 3px solid var(--accent-primary);
 }

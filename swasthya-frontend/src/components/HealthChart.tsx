@@ -26,27 +26,27 @@ const chartConfig = {
     weight: {
         title: 'Weight Trend',
         unit: 'lbs',
-        color: '#00d4aa',
+        color: '#00E676',
         gradientId: 'weightGradient',
     },
     temperature: {
         title: 'Temperature',
         unit: '°F',
-        color: '#ff9500',
+        color: '#FF5252',
         gradientId: 'tempGradient',
         threshold: 103,
     },
     gait: {
         title: 'Gait Score',
         unit: 'score',
-        color: '#0099ff',
+        color: '#00BCD4',
         gradientId: 'gaitGradient',
         threshold: 3,
     },
     activity: {
         title: 'Activity Level',
         unit: '%',
-        color: '#a855f7',
+        color: '#00E676',
         gradientId: 'activityGradient',
         threshold: 20,
     },
@@ -97,19 +97,19 @@ export default function HealthChart({ data, type, threshold }: ChartProps) {
                     />
                     <Tooltip
                         contentStyle={{
-                            background: '#1a2332',
-                            border: '1px solid #38444d',
+                            background: '#1e1e1e',
+                            border: '1px solid #333333',
                             borderRadius: '8px',
-                            color: '#fff',
+                            color: '#E0E0E0',
                         }}
                         formatter={(value: number) => [`${value} ${config.unit}`, config.title]}
                     />
                     {thresholdValue && (
                         <ReferenceLine
                             y={thresholdValue}
-                            stroke="#ff3b5c"
+                            stroke="#FF5252"
                             strokeDasharray="5 5"
-                            label={{ value: 'Threshold', fill: '#ff3b5c', fontSize: 10 }}
+                            label={{ value: 'Threshold', fill: '#FF5252', fontSize: 10 }}
                         />
                     )}
                     <Bar
@@ -147,19 +147,19 @@ export default function HealthChart({ data, type, threshold }: ChartProps) {
                     />
                     <Tooltip
                         contentStyle={{
-                            background: '#1a2332',
-                            border: '1px solid #38444d',
+                            background: '#1e1e1e',
+                            border: '1px solid #333333',
                             borderRadius: '8px',
-                            color: '#fff',
+                            color: '#E0E0E0',
                         }}
                         formatter={(value: number) => [`${value}${config.unit}`, config.title]}
                     />
                     {thresholdValue && (
                         <ReferenceLine
                             y={thresholdValue}
-                            stroke="#ff3b5c"
+                            stroke="#FF5252"
                             strokeDasharray="5 5"
-                            label={{ value: 'Min', fill: '#ff3b5c', fontSize: 10 }}
+                            label={{ value: 'Min', fill: '#FF5252', fontSize: 10 }}
                         />
                     )}
                     <Area
@@ -198,19 +198,19 @@ export default function HealthChart({ data, type, threshold }: ChartProps) {
                 />
                 <Tooltip
                     contentStyle={{
-                        background: '#1a2332',
-                        border: '1px solid #38444d',
+                        background: '#1e1e1e',
+                        border: '1px solid #333333',
                         borderRadius: '8px',
-                        color: '#fff',
+                        color: '#E0E0E0',
                     }}
                     formatter={(value: number) => [`${value} ${config.unit}`, config.title]}
                 />
                 {thresholdValue && (
                     <ReferenceLine
                         y={thresholdValue}
-                        stroke="#ff3b5c"
+                        stroke="#FF5252"
                         strokeDasharray="5 5"
-                        label={{ value: 'Max', fill: '#ff3b5c', fontSize: 10 }}
+                        label={{ value: 'Max', fill: '#FF5252', fontSize: 10 }}
                     />
                 )}
                 <Line
@@ -240,7 +240,7 @@ export default function HealthChart({ data, type, threshold }: ChartProps) {
                 </h3>
                 {latestValue !== undefined && (
                     <span
-                        className={`text-lg font-bold ${isAboveThreshold ? 'text-[#ff3b5c]' : 'text-[var(--accent-primary)]'
+                        className={`text-lg font-bold ${isAboveThreshold ? 'text-[#FF5252]' : 'text-[var(--accent-primary)]'
                             }`}
                     >
                         {latestValue.toFixed(1)} {config.unit}
